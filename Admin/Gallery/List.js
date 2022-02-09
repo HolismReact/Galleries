@@ -23,7 +23,7 @@ const itemActions = (item) => <>
   <ItemAction
     title='Manage images'
     icon={CollectionsIcon}
-    goTo={`/media/images?entityGuid=${item.guid}`}
+    goTo={`/media/images?entityType=${item.relatedItems.entityType}&entityGuid=${item.guid}`}
   />
 </>
 
