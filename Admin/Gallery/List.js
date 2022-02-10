@@ -1,5 +1,5 @@
 import CollectionsIcon from '@mui/icons-material/Collections';
-import { List, ImageGroup, Text, ItemAction } from '@List'
+import { List, ImageGroup, Image, Text, ItemAction } from '@List'
 import UpsertGallery from './Upsert'
 
 const filters = <>
@@ -10,11 +10,18 @@ const filters = <>
 </>
 
 const headers = <>
+  <th></th>
   <th>Title</th>
   <th>Images</th>
 </>
 
 const row = (item) => <>
+  <td>
+    <Image
+      url={item.relatedItems.coverImageUrl}
+      uploadUrl={`/gallery/setImage?galleryId=${item.id}`}
+    />
+  </td>
   <td>{item.title}</td>
   <td>
     <ImageGroup
