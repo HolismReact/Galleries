@@ -18,7 +18,7 @@ const headers = <>
 const row = (item) => <>
   <td>
     <Image
-      url={item.relatedItems.coverImageUrl}
+      url={item.relatedItems.imageUrl}
       uploadUrl={`/gallery/setImage?galleryId=${item.id}`}
     />
   </td>
